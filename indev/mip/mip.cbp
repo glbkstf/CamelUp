@@ -32,15 +32,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="defines.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="defines2.h" />
 		<Unit filename="display.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="display.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="display2.c">
@@ -52,9 +46,6 @@
 		</Unit>
 		<Unit filename="tirage_pyramide.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="tirage_pyramide.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="tirage_pyramide2.c">

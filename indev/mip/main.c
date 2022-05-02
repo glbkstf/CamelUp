@@ -8,7 +8,6 @@
 
 int main()
 {
-    printf("test");
 
     S_case circuit[16];
     S_pyr pyramide[5];
@@ -16,18 +15,14 @@ int main()
     int chameaux[5]={1,2,3,4,5};    // position des chamaux (R,Y,G,B,W)
     int avcnt_pyr=0;
 
-    printf("test");
-
     for (int i=0; i<16; i++)        // mise à zéro de la piste
     {
         circuit[i].desert=0;
-        for (int j=0; i<5; j++)
+        for (int j=0; j<5; j++)
         {
             circuit[i].chameaux[j]=0;
         }
     }
-
-    printf("test");
 
     tirage_pyramide(pyramide);
     disp_pyramide(pyramide);
