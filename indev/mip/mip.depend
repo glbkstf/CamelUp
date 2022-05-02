@@ -70,3 +70,30 @@
 	"defines2.h"
 	"tirage_pyramide2.h"
 
+1651514674 source:/home/adrien/Documents/camelup/indev/mip/display2.c
+	<stdio.h>
+	<stdlib.h>
+	"defines2.h"
+	"display2.h"
+
+1651517057 /home/adrien/Documents/camelup/indev/mip/defines2.h
+
+1650975506 /home/adrien/Documents/camelup/indev/mip/display2.h
+
+1651517323 source:/home/adrien/Documents/camelup/indev/mip/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines2.h"
+	"tirage_pyramide2.h"
+	"display2.h"
+
+1650975992 /home/adrien/Documents/camelup/indev/mip/tirage_pyramide2.h
+
+1651517402 source:/home/adrien/Documents/camelup/indev/mip/tirage_pyramide2.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines2.h"
+	"tirage_pyramide2.h"
+

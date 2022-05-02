@@ -20,6 +20,9 @@ void disp_piste(S_case piste[])
         printf("  %d  ", piste[i].desert);
     printf("\nchamal : ");
     for (int j=0; j<5; j++)
+    {
         for (int i=0; i<16; i++)
             printf("  %d  ", piste[i].chameaux[j]);
+        printf("\n");
+    }
 }

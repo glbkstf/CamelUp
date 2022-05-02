@@ -14,7 +14,7 @@ void tirage_pyramide(S_pyr pyramide[])
 
     for(int i=0; i<5; i++)
     {
-        pyramide[i].valeur=i + (rand() % 3);//nombre de cases à avancer (on pourrait presque se passer de la faire ici
+        pyramide[i].valeur=1+(rand() % 3);//nombre de cases à avancer (on pourrait presque se passer de la faire ici)
         pyramide[i].couleur=pyra[i];        //couleur du dé
     }
 }

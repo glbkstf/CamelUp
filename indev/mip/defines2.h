@@ -3,7 +3,7 @@
 
 struct case_piste  {            // type structuré d'une case de la piste
                 int desert;
-                int chameaux[5]
+                int chameaux[5];
                 };
 typedef struct case_piste S_case;
 
