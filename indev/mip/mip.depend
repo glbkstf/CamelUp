@@ -70,17 +70,28 @@
 	"defines2.h"
 	"tirage_pyramide2.h"
 
-1651514674 source:/home/adrien/Documents/camelup/indev/mip/display2.c
+1651520392 source:/home/adrien/Documents/camelup/indev/mip/display2.c
 	<stdio.h>
 	<stdlib.h>
 	"defines2.h"
 	"display2.h"
 
-1651517057 /home/adrien/Documents/camelup/indev/mip/defines2.h
+1651519838 /home/adrien/Documents/camelup/indev/mip/defines2.h
 
-1650975506 /home/adrien/Documents/camelup/indev/mip/display2.h
+1651521877 /home/adrien/Documents/camelup/indev/mip/display2.h
 
-1651517323 source:/home/adrien/Documents/camelup/indev/mip/main.c
+1651522213 source:/home/adrien/Documents/camelup/indev/mip/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines2.h"
+	"tirage_pyramide2.h"
+	"display2.h"
+	"deplacement.h"
+
+1651521875 /home/adrien/Documents/camelup/indev/mip/tirage_pyramide2.h
+
+1651524080 source:/home/adrien/Documents/camelup/indev/mip/tirage_pyramide2.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -88,12 +99,12 @@
 	"tirage_pyramide2.h"
 	"display2.h"
 
-1650975992 /home/adrien/Documents/camelup/indev/mip/tirage_pyramide2.h
-
-1651517402 source:/home/adrien/Documents/camelup/indev/mip/tirage_pyramide2.c
+1651522133 source:/home/adrien/Documents/camelup/indev/mip/deplacement.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	"defines2.h"
-	"tirage_pyramide2.h"
+	"deplacement.h"
+
+1651522328 /home/adrien/Documents/camelup/indev/mip/deplacement.h
 

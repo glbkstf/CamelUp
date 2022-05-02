@@ -3,36 +3,39 @@
 #include <time.h>
 #include "defines2.h"
 #include "tirage_pyramide2.h"
+#include "display2.h"
 
 void shuffle(int liste[], int taille);
 
 void tirage_pyramide(S_pyr pyramide[])
 {
-    int pyra[5]={1,2,3,4,5};    //tableau temporaire
+    int pyra[5]={1,2,3,4,5};    //tableau des couleurs
 
-    shuffle(pyra,5);
+    /*for(int a=0; a<5; a++)
+        printf("%d", pyra[a]);*/
+
+    shuffle(pyra,5);    //mélange le tab des couleurs
 
     for(int i=0; i<5; i++)
     {
-        pyramide[i].valeur=1+(rand() % 3);//nombre de cases à avancer (on pourrait presque se passer de la faire ici)
+        pyramide[i].valeur=1+(rand() % 3);  //nombre de cases à avancer (on pourrait presque se passer de la faire ici)
         pyramide[i].couleur=pyra[i];        //couleur du dé
     }
 }
 
-void shuffle(int liste[], int taille) // mélange un tableau 'liste' de manière aléatoire
+void shuffle(int liste[], int taille) // mélange un tableau 'liste' de taille 'taille' aléatoirement
 {
-    int list[taille];
-    for(int k=0; k<taille; k++) // remplit 'list' de nombres de 0 à 'taille-1'
-        list[k]=k;
+    int tmp, b;
 
-    for (int i = 0; i < 5; i++) // mélange 'list' et l'affecte à 'liste'
+    for(int a=taille-1; a>0; a--)
     {
-        int j = i + rand() % (taille - i);
-        int temp = list[i];
-        list[i] = list[j];
-        list[j] = temp;
+        b=rand() % (a+1);
+        tmp=liste[a];
+        liste[a]=liste[b];
+        liste[b]=tmp;
 
-        liste[i] = list[i];
-
-    }/* shuffle algorythm by 'mob' on stack overflow: https://stackoverflow.com/a/1608254 */
+        /*printf("\n");
+        for(int c=0; c<5; c++)
+            printf("%d", liste[c]);*/
+    }//algo de tri basé sur le mélange de Fischer-Yates (si je l'ai bien compris)
 }

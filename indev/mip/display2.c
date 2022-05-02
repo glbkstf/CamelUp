@@ -15,14 +15,14 @@ void disp_pyramide(S_pyr pyramide[])
 
 void disp_piste(S_case piste[])
 {
-    printf("desert : ");
+    printf("\ndesert : \n");
     for (int i=0; i<16; i++)
         printf("  %d  ", piste[i].desert);
-    printf("\nchamal : ");
-    for (int j=0; j<5; j++)
+    printf("\nchamal : \n");
+    for (int j=4; j>=0; j--)
     {
         for (int i=0; i<16; i++)
-            printf("  %d  ", piste[i].chameaux[j]);
+            printf("  %d  ", piste[i].cham[j]);
         printf("\n");
     }
 }
