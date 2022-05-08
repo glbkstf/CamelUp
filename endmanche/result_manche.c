@@ -19,7 +19,7 @@ void result_manche(S_case piste[], int pos[], int cartes[][3], S_joueur joueurs[
     int place=0;
     for(int a=top; a>=btm; a--)
         for(int b=4; b>=0; b--)
-            if(piste[a].cham[b]!=0) //chameau présent à cet emplecnt ?
+            if(piste[a].cham[b]!=0) //chameau présent sur cette case ?
             {
                 if(cartes[piste[a].cham[b]-1][0]!=0)    //qqun a parié sur ce chameau ?
                     for(int c=0; c<3; c++)
@@ -27,6 +27,7 @@ void result_manche(S_case piste[], int pos[], int cartes[][3], S_joueur joueurs[
                         if(cartes[piste[a].cham[b]-1][c]==0)    //qqun a pris cette carte ?
                             break;
                         joueurs[cartes[piste[a].cham[b]-1][c]-1].argent = joueurs[cartes[piste[a].cham[b]-1][c]-1].argent + calcul_gain(place, c);
+                        /*printf("\nJ%d + %d ", cartes[piste[a].cham[b]-1][c], calcul_gain(place, c));*/
                     }
                 place++;
             }

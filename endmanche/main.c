@@ -27,7 +27,7 @@ int main()
     disp_piste(piste);
 
     carte_manche[4][0]=2;   //J2 a pris la 1re carte du chameau 5
-    carte_manche[1][1]=2;   //J2 a pris la 2e carte du chameau 2
+    carte_manche[1][0]=2;   //J2 a pris la 2e carte du chameau 2
     carte_manche[2][1]=2;   //J2 a pris la 2e carte du chameau 3
     carte_manche[3][0]=3;   //J3 a pris la 1re carte du chameau 4
     carte_manche[2][0]=3;   //J3 a pris la 1re carte du chameau 3
@@ -35,7 +35,7 @@ int main()
     carte_manche[0][0]=1;   //J1 a pris la 1re carte du chameau 1
     carte_manche[3][1]=4;   //J4 a pris la 2e carte du chameau 4
     carte_manche[0][1]=4;   //J4 a pris la 2e carte du chameau 1
-    carte_manche[1][2]=4;   //J4 a pris la 3e carte du chameau 2
+    carte_manche[1][1]=4;   //J4 a pris la 3e carte du chameau 2
 
     //attribue les gains
     result_manche(piste, pos_cham, carte_manche, joueurs);

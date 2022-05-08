@@ -9,14 +9,15 @@
 
 1651951366 /home/adrien/Documents/dev/camelup/indev/endmanche/display.h
 
-1651952809 source:/home/adrien/Documents/dev/camelup/indev/endmanche/main.c
+1651955217 source:/home/adrien/Documents/dev/camelup/indev/endmanche/main.c
 	<stdio.h>
 	<stdlib.h>
 	"defines.h"
 	"setup.h"
 	"display.h"
+	"result_manche.h"
 
-1651952191 source:/home/adrien/Documents/dev/camelup/indev/endmanche/setup.c
+1652028293 source:/home/adrien/Documents/dev/camelup/indev/endmanche/setup.c
 	<stdio.h>
 	<stdlib.h>
 	"defines.h"
@@ -24,7 +25,7 @@
 
 1651952184 /home/adrien/Documents/dev/camelup/indev/endmanche/setup.h
 
-1651954816 source:/home/adrien/Documents/dev/camelup/indev/endmanche/result_manche.c
+1652036533 source:/home/adrien/Documents/dev/camelup/indev/endmanche/result_manche.c
 	<stdio.h>
 	<stdlib.h>
 	"defines.h"

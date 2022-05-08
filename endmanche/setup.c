@@ -17,7 +17,7 @@ void setup(S_case piste[], int cartes[][3], S_joueur joueurs[], int nb_plyr)
 
     for(int a=0; a<nb_plyr; a++)
     {
-        joueurs[a].argent=3;
+        joueurs[a].argent=0;
         joueurs[a].desert=0;
         joueurs[a].pyra=0;
         for(int b=0; b<5; b++)
