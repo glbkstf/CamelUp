@@ -10,29 +10,32 @@ void move_chamal(S_case piste[], int pos[], int coulr, int pas)
 
     printf("\nreperage depart");
 
-    for(int a=0; a<5; a++)      //repère la hauteur du chameau à déplacer
-        if(piste[case_dep].cham[a]==coulr)
+    for(int b=0; b<5; b++)      //repère la hauteur du chameau à déplacer
+        if(piste[case_dep].cham[b]==coulr)
         {
-            h_depart=a;
+            h_depart=b;
             break;
         }
 
     printf("\nreperage arrivee");
 
-    for(int a=0; a<5; a++)      //repère la hauteur où le placer
-        if(piste[case_dep+pas].cham[a]==0)
+    for(int b=0; b<5; b++)      //repère la hauteur où le placer
+        if(piste[case_dep+pas].cham[b]==0)
         {
-            h_arrivee=a;
+            h_arrivee=b;
             break;
         }
 
     printf("\ndeplacement");
 
-    for(int a=h_depart; a<5 /*|| piste[case_dep].cham[h_depart+a]!=0*/; a++)     //déplace le chameau et ceux au dessus
+    for(int b=0; b<5-h_depart; b++)     //déplace le chameau et ceux au dessus
     {
-        piste[case_dep+pas].cham[h_arrivee+a]=piste[case_dep].cham[h_depart+a]; //place chameau dans nouvelle case
-        pos[piste[case_dep].cham[h_depart+a]-1]=case_dep+pas;                     //maj la position du chameau
-        piste[case_dep].cham[h_depart+a]=0;                                     //libère ancienne case
+        if(piste[case_dep].cham[h_depart+b]!=0)
+        {
+            piste[case_dep+pas].cham[h_arrivee+b]=piste[case_dep].cham[h_depart+b]; //place chameau dans nouvelle case
+            pos[piste[case_dep].cham[h_depart+b]-1]=case_dep+pas;                   //maj la position du chameau
+            piste[case_dep].cham[h_depart+b]=0;                                     //libère ancienne case
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 #include "deplacement.h"
 
 
+
 int main()
 {
 
@@ -37,19 +38,59 @@ int main()
     tirage_pyramide(pyramide);
     disp_pyramide(pyramide);
 
-
-    for (int x=0; x<5; x++)
+    //int a=0;
+    for (int a=0; a<5; a++)
     {
-        printf("\nx=%d",x);
-        move_chamal(circuit, pos_cham, pyramide[x].couleur, pyramide[x].valeur);
-        printf("\nx=%d",x);
+        printf("\na=%d",a);
+        move_chamal(circuit, pos_cham, pyramide[a].couleur, pyramide[a].valeur);
+
+        //test
+        /*int coulr=pyramide[a].couleur, pas=pyramide[a].valeur;
+        int h_depart, h_arrivee, case_dep=pos_cham[coulr-1];
+        printf("\n\tcase_dep=%d", case_dep);
+
+        printf("\nreperage depart");
+
+        for(int b=0; b<5; b++)      //repère la hauteur du chameau à déplacer
+            if(circuit[case_dep].cham[b]==coulr)
+            {
+                h_depart=b;
+                break;
+            }
+        printf("\n\th_depart=%d", h_depart);
+
+        printf("\nreperage arrivee");
+
+        for(int b=0; b<5; b++)      //repère la hauteur où le placer
+            if(circuit[case_dep+pas].cham[b]==0)
+            {
+                h_arrivee=b;
+                break;
+            }
+        printf("\n\th_arrivee=%d", h_arrivee);
+
+        printf("\ndeplacement");
+
+        for(int b=0; b<5-h_depart; b++)     //déplace le chameau et ceux au dessus
+        {
+            printf("\n\theight=%d", h_depart+b);
+            if(circuit[case_dep].cham[h_depart+b]!=0)
+            {
+                printf("\n\tmove=%d", b);
+                circuit[case_dep+pas].cham[h_arrivee+b]=circuit[case_dep].cham[h_depart+b]; //place chameau dans nouvelle case
+                pos_cham[circuit[case_dep].cham[h_depart+b]-1]=case_dep+pas;                //maj la position du chameau
+                circuit[case_dep].cham[h_depart+b]=0;                                       //libère ancienne case
+            }
+        }*/
+        //test
+
+        printf("\na=%d",a);
         disp_position(pos_cham);
-        printf("\nx=%d",x);
         disp_piste(circuit);
-        printf("x=%d",x);
     }
 
     printf("\n\nend");
 
     return 0;
 }
+
