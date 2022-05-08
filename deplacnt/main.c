@@ -10,8 +10,7 @@
 
 int main()
 {
-
-    S_case circuit[16];
+    S_case circuit[17];
     S_pyr pyramide[5];
     srand(time(NULL));
     int pos_cham[5]={1,2,3,4,5};    // position des chamaux (R,Y,G,B,W)

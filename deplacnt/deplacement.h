@@ -2,7 +2,7 @@
 #define DEPLACEMENT_H_INCLUDED
 
 //déplace le(s) chameau(x)
-void move_chamal(S_case piste[], int pos[], int coulr, int pas);
+int move_chamal(S_case piste[], int pos[], int coulr, int pas);
 
 //1er placement des chameaux
 int setup_chamal(S_case piste[], int coulr, int pas);

@@ -25,18 +25,18 @@ void disp_piste(S_case piste[])
 {
     printf("\ndesert : \n|");
     for (int i=0; i<16; i++)
-        printf("  %d  ", piste[i].desert);
+        printf("  %d  |", piste[i].desert);
     printf("\nchamal : \n");
     for (int j=4; j>=0; j--)
     {
-        printf("|");
         for (int i=0; i<16; i++)
-            /*switch(piste[i].cham[j])
+            switch(piste[i].cham[j])
             {
-                case 0 : printf("     |");
+                case 0 : printf("|     ");
                         break;
-                default : */printf("  %d  ", piste[i].cham[j]);
-            /*}*/
+                default : printf("|  %d  ", piste[i].cham[j]);
+            }
+        printf("||");
         printf("\n");
     }
 }
