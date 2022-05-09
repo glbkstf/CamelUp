@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1652116088 source:c:\users\oscar\documents\estaca\1ère année\semestre 2\algo\projet camel up\pari_manche et pari-course\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1651960604 source:c:\users\oscar\documents\estaca\1ère année\semestre 2\algo\projet camel up\pari_manche et pari-course\pari-course.c
+	<stdio.h>
+	<stdlib.h>
+
+1652119308 source:c:\users\oscar\documents\estaca\1ère année\semestre 2\algo\projet camel up\pari_manche et pari-course\pari-manche.c
+	<stdio.h>
+	<stdlib.h>
+
