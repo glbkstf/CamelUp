@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1651951363 source:/home/adrien/Documents/dev/camelup/indev/endmanche/display.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"display.h"
+
+1651952206 /home/adrien/Documents/dev/camelup/indev/endmanche/defines.h
+
+1651951366 /home/adrien/Documents/dev/camelup/indev/endmanche/display.h
+
+1651955217 source:/home/adrien/Documents/dev/camelup/indev/endmanche/main.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"setup.h"
+	"display.h"
+	"result_manche.h"
+
+1652028293 source:/home/adrien/Documents/dev/camelup/indev/endmanche/setup.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"setup.h"
+
+1651952184 /home/adrien/Documents/dev/camelup/indev/endmanche/setup.h
+
+1652036533 source:/home/adrien/Documents/dev/camelup/indev/endmanche/result_manche.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"result_manche.h"
+
+1651954819 /home/adrien/Documents/dev/camelup/indev/endmanche/result_manche.h
+
+1652088070 source:/home/adrien/Documents/dev/camelup/indev/endgame/display.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"display.h"
+
+1651952206 /home/adrien/Documents/dev/camelup/indev/endgame/defines.h
+
+1651951366 /home/adrien/Documents/dev/camelup/indev/endgame/display.h
+
+1652091754 source:/home/adrien/Documents/dev/camelup/indev/endgame/main.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"setup.h"
+	"display.h"
+	"result_course.h"
+
+1652090019 /home/adrien/Documents/dev/camelup/indev/endgame/setup.h
+
+1651954819 /home/adrien/Documents/dev/camelup/indev/endgame/result_manche.h
+
+1652087750 source:/home/adrien/Documents/dev/camelup/indev/endgame/result_manche.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"result_manche.h"
+
+1652090880 source:/home/adrien/Documents/dev/camelup/indev/endgame/setup.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"setup.h"
+
+1652090902 /home/adrien/Documents/dev/camelup/indev/endgame/result_course.h
+
+1652091008 source:/home/adrien/Documents/dev/camelup/indev/endgame/result_course.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"result_course.h"
+
