@@ -20,7 +20,6 @@ int main()
     int pari_win[nb_joueurs*5][2];      // paris sur la victoire
     int pari_loose[nb_joueurs*5][2];    // paris sur la défate
     int pos_cham[5]={1,2,3,4,5};        // position des chamaux (R,Y,G,B,W)
-    int avcnt_pyr=0;                    // avancement dans la pyramide
 
     setup(piste, carte_manche, joueurs, nb_joueurs);
     setup_pari_course(pari_win, nb_joueurs);
@@ -32,24 +31,27 @@ int main()
         pos_cham[pyramide[a].couleur-1]=setup_chamal(piste, pyramide[a].couleur, pyramide[a].valeur);
 
     //début de la manche
-    int player=1;
+    int avcnt_pyr=0;        // avancement dans la pyramide
+    int player=0;           // joueur dont c'est le tour
     do
     {
+        printf("\nC'est au joueur %d", player+1);
         disp_piste(piste);
         choice: switch(choix())
         {
             case 1 : if(place_desert()==0)
                         goto choice;
                     break;
-            case 2 : if(use_pyramid()==0)
+            case 2 : if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
                         goto choice;
+                    joueurs[player].pyra++;
                     avcnt_pyr++;
                     break;
             case 3 : if(pari_manche()==0)
                         goto choice;
                     break;
-            case 4 : victoireoufefaite:
-                    printf("\nparier sur la defaite ou la victoire ? (entrez -1 ou 1)");
+            case 4 : victoireoudefaite:
+                    printf("\nParier sur la defaite ou la victoire ? (entrez -1 ou 1)");
                     int var;
                     scanf("%d", &var);
                     switch(var)
@@ -64,12 +66,23 @@ int main()
                                     goto choice;
                                 }
                                 break;
-                        default : goto victoireoufefaite;
+                        default : goto victoireoudefaite;
                     }
                     break;
         }
-        player++;
+        disp_piste(piste);
+        player=player+1 %nb_joueurs;
     }while(avcnt_pyr<4);     //tant que toute la pyramide n'a pas été utilisée
+
+    printf("\nFin de la manche.");
+
+    //calcule les gains de fin de manche
+    gains_manche(piste, pos_cham, carte_manche, joueurs, nb_joueurs);
+
+    for(int a=0; a<nb_joueurs; a++)
+        printf("\nJoueur %d, vous avez %d livres.", a+1, joueurs[a].argent);
+
+
 
 
     return 0;

@@ -1,6 +1,8 @@
 #ifndef DEPLACEMENT_H_INCLUDED
 #define DEPLACEMENT_H_INCLUDED
 
+#include "defines.h"
+
 //déplace le(s) chameau(x)
 int move_chamal(S_case piste[], int pos[], int coulr, int pas);
 

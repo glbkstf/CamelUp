@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "deplacement.h"
 #include "defines.h"
 
 int choix()
@@ -7,7 +8,7 @@ int choix()
     int choice;
     printf("\nVpous pouvez :");
     printf("\n\t1. Deplacer votre tuile desert");
-    printf("\n\t2. Prendre un dé");
+    printf("\n\t2. Retourner la pyramide");
     printf("\n\t3. Parier sur cette manche");
     printf("\n\t4. Parier sur la course");
     do
@@ -24,10 +25,12 @@ int place_desert()
     return 0;
 }
 
-int use_pyramid()
+int use_pyramid(S_case piste[], int pos[], int couleur, int valeur)
 {
-    printf("\npas encore implemente");
-    return 0;
+    /*printf("\npas encore implemente");*/
+    printf("\nLe chameau numero %d avance de %d cases", couleur, valeur);
+    move_chamal(piste, pos, couleur, valeur);
+    return 1;
 }
 
 int pari_manche()

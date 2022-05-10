@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "defines.h"
+//#include "defines.h"
 #include "deplacement.h"
 
 int move_chamal(S_case piste[], int pos[], int coulr, int pas)

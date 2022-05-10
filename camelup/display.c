@@ -6,14 +6,14 @@
 void disp_piste(S_case piste[])
 {
     printf("\ndesert : \n|");
-    for (int i=0; i<16; i++)
+    for(int i=0; i<16; i++)
         switch(piste[i].desert)
         {
             case 0 : printf("     |");
                     break;
             default : printf("  %d  |", piste[i].desert);
         }
-    printf("\nchamal : \n");
+    printf("\nchameaux : \n");
     for (int j=4; j>=0; j--)
     {
         for (int i=0; i<16; i++)
@@ -32,5 +32,5 @@ void disp_piste(S_case piste[])
             }
         printf("\n");
     }
-    printf(" depart\t\t\t\t\t\t\t\t\t\t\t\t                 arrivee\n");
+    /*printf(" depart\t\t\t\t\t\t\t\t\t\t\t\t                 arrivee\n");*/
 }

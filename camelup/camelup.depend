@@ -40,3 +40,58 @@
 
 1652177457 /home/adrien/Documents/dev/camelup/alpha/camelup/display.h
 
+1652187843 source:c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\deplacement.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"deplacement.h"
+
+1652179918 c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\defines.h
+
+1652187845 c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\deplacement.h
+	"defines.h"
+
+1652187916 source:c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\display.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"display.h"
+
+1652179918 c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\display.h
+
+1652179918 source:c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\setup.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"setup.h"
+
+1652179918 c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\setup.h
+
+1652179918 source:c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\tirage_pyramide.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines.h"
+	"tirage_pyramide.h"
+
+1652179918 c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\tirage_pyramide.h
+
+1652187942 source:c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\actions.c
+	<stdio.h>
+	<stdlib.h>
+	"deplacement.h"
+	"defines.h"
+
+1652187620 source:c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines.h"
+	"display.h"
+	"setup.h"
+	"deplacement.h"
+	"tirage_pyramide.h"
+	"actions.h"
+
+1652187825 c:\users\5822600\downloads\camelup-0.4.0-alpha\camelup\actions.h
+
