@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1652176853 source:/home/adrien/Documents/dev/camelup/alpha/camelup/setup.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"setup.h"
+
+1652176010 /home/adrien/Documents/dev/camelup/alpha/camelup/defines.h
+
+1652177176 /home/adrien/Documents/dev/camelup/alpha/camelup/setup.h
+
+1652176564 source:/home/adrien/Documents/dev/camelup/alpha/camelup/tirage_pyramide.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines.h"
+	"tirage_pyramide.h"
+
+1652176527 /home/adrien/Documents/dev/camelup/alpha/camelup/tirage_pyramide.h
+
+1652179173 source:/home/adrien/Documents/dev/camelup/alpha/camelup/actions.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+
+1652177120 source:/home/adrien/Documents/dev/camelup/alpha/camelup/deplacement.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"defines.h"
+	"deplacement.h"
+
+1652176955 /home/adrien/Documents/dev/camelup/alpha/camelup/deplacement.h
+
+1652177711 source:/home/adrien/Documents/dev/camelup/alpha/camelup/display.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"display.h"
+
+1652177457 /home/adrien/Documents/dev/camelup/alpha/camelup/display.h
+
