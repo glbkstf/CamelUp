@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652124505 source:/home/adrien/Documents/dev/camelup/indev/parimanche/main.c
+	<stdio.h>
+	<stdlib.h>
+
