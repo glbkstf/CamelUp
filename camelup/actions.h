@@ -5,11 +5,11 @@
 int choix();
 
 //actions :
-int place_desert();
+//int place_desert();
 
 int use_pyramid(S_case piste[], int pos[], int couleur, int valeur);
 
-int pari_manche(int cartes_manche[][3],int num_joueur);
+int pari_manche();
 
 int pari_course();
 

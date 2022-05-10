@@ -7,8 +7,7 @@
 #include "deplacement.h"
 #include "tirage_pyramide.h"
 #include "actions.h"
-#include "gainsmanche.h"
-
+#include "place_desert.h"
 
 int main()
 {
@@ -39,17 +38,17 @@ int main()
     {
         printf("\nC'est au joueur %d", player+1);
         disp_piste(piste);
-        choice: switch(choix())     //choix des actions
+        choice: switch(choix())
         {
-            case 1 : if(place_desert()==0)     //si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau
+            case 1 : if(place_desert(&joueurs[player].desert, piste)==0)
                         goto choice;
                     break;
             case 2 : if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
                         goto choice;
-                    joueurs[player].pyra++; //gain d'une tuile pyramide
-                    avcnt_pyr++;    //dé suivant
+                    joueurs[player].pyra++;
+                    avcnt_pyr++;
                     break;
-            case 3 : if(pari_manche(carte_manche, player+1)==0)
+            case 3 : if(pari_manche()==0)
                         goto choice;
                     break;
             case 4 : victoireoudefaite:
@@ -72,10 +71,8 @@ int main()
                     }
                     break;
         }
-        player=(player+1) % (nb_joueurs);
-        printf("\n\n\n\n");
-        /*printf("\n\nAppuyez sur Entree pour continuer");
-        scanf("");*/
+        disp_piste(piste);
+        player=player+1 %nb_joueurs;
     }while(avcnt_pyr<4);     //tant que toute la pyramide n'a pas été utilisée
 
     printf("\nFin de la manche.");
