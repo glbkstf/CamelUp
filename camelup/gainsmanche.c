@@ -45,13 +45,19 @@ int calcul_gain(int pos, int carte)
 {
     switch(pos)
     {
-        case 0 : switch(carte)
-                {
-                    case 0 : return 5;
-                    case 1 : return 3;
-                    case 2 : return 2;
-                }
-        case 1 : return 1;
-        default : return -1;
+    case 0 :
+        switch(carte)
+        {
+        case 0 :
+            return 5;
+        case 1 :
+            return 3;
+        case 2 :
+            return 2;
+        }
+    case 1 :
+        return 1;
+    default :
+        return -1;
     }
 }
