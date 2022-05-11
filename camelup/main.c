@@ -38,45 +38,54 @@ int main()
     int player=0;           // joueur dont c'est le tour
     do
     {
-        printf("\nC'est au joueur %d", player+1);
+        printf("\n\n\n\n\nC'est au joueur %d\n", player+1); //appel du joueur
         disp_piste(piste);
+        printf("\nParis sur la victoire :");      //affichage des paris-course
+        disp_paricourse(pari_win);
+        printf("\nParis sur la defaite :");
+        disp_paricourse(pari_loose);
+        printf("\nVous possedez %d livres.", joueurs[player].argent);
+        printf("\nVous possedez %d tuiles pyramide.", joueurs[player].pyra);
+
         choice: switch(choix())     //choix des actions. Si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau
         {
-            case 1 : if(place_desert(&joueurs[player].desert, piste)==0)    //pas d'annulation possible
-                        goto choice;
-                    break;
-            case 2 : if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
-                        goto choice;
-                    joueurs[player].pyra++; //gain d'une tuile pyramide
-                    avcnt_pyr++;    //dé suivant
-                    break;
-            case 3 : if(pari_manche(carte_manche, player+1)==0)
-                        goto choice;
-                    break;
-            case 4 : victoireoudefaite:
-                    printf("\nParier sur la defaite ou la victoire ? (entrez -1 ou 1)");
-                    int var;
-                    scanf("%d", &var);
-                    switch(var)
-                    {
-                        case -1 : if(pari_course()==0)
-                                {
-                                    goto choice;
-                                }
-                                break;
-                        case 1 : if(pari_course()==0)
-                                {
-                                    goto choice;
-                                }
-                                break;
-                        default : goto victoireoudefaite;
-                    }
-                    break;
+            case 1 :    /*if(*/place_desert(&joueurs[player].desert, piste);/*==0)*/    //pas d'annulation implémentée
+                            /*goto choice;*/
+                        disp_piste(piste);
+                        break;
+
+            case 2 :    if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
+                            goto choice;
+                        joueurs[player].pyra++; //gain d'une tuile pyramide
+                        avcnt_pyr++;    //dé suivant
+                        disp_piste(piste);
+                        break;
+
+            case 3 :    if(pari_manche(carte_manche, player+1)==0)
+                            goto choice;
+                        break;
+
+            case 4 :    victoireoudefaite:
+                        printf("\nParier sur la defaite ou la victoire ? (entrez respectivement -1 ou 1, ou 0 pour annuler)");
+                        int var;
+                        scanf("%d", &var);
+                        if(var==0);
+                            goto choice;
+                        switch(var)
+                        {
+                            case -1 :   if(pari_course()==0)  //pari sur la défaite
+                                            goto choice;
+                                        break;
+                            case 1 :    if(pari_course()==0)   //pari sur la victoire
+                                            goto choice;
+                                        break;
+                            default : goto victoireoudefaite;
+                        }
+                        break;
         }
         player=(player+1) % (nb_joueurs);
-        printf("\n\n\n\n");
-        /*printf("\n\nAppuyez sur Entree pour continuer");
-        scanf("");*/
+        /*printf("\n\nAppuyez sur Entree pour continuer");*/
+
     }while(avcnt_pyr<4);     //tant que toute la pyramide n'a pas été utilisée
 
     printf("\nFin de la manche.");

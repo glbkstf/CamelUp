@@ -39,7 +39,7 @@ int place_desert(int *position, S_case piste[])
             case 1:
                 if(piste[2].desert==0)
                 {
-                    printf("Que voulez faire ? Placer une case Mirage /0 ou Oasis (n'importe quel autre chiffre) ? ");
+                    printf("Que voulez faire ? Placer une case Mirage (0) ou Oasis (n'importe quel autre chiffre) ? ");
                     scanf("%d", &choice_case);
                     if(choice_case==0)
                     {
@@ -65,7 +65,7 @@ int place_desert(int *position, S_case piste[])
             case 15:
                 if(piste[14].desert==0)
                 {
-                    printf("Que voulez faire ? Placer une case Mirage /0 ou Oasis (n'importe quel autre chiffre) ? ");
+                    printf("Que voulez faire ? Placer une case Mirage (0) ou Oasis (n'importe quel autre chiffre) ? ");
                     scanf("%d", &choice_case);
                     if(choice_case==0)
                     {
@@ -90,7 +90,7 @@ int place_desert(int *position, S_case piste[])
             default:
                 if(piste[newposition-1].desert==0&&piste[newposition+1].desert==0)
                 {
-                    printf("Que voulez faire ? Placer une case Mirage /0 ou Oasis (n'importe quel autre chiffre) ?");
+                    printf("Que voulez faire ? Placer une case Mirage (0) ou Oasis (n'importe quel autre chiffre) ?");
                     scanf("%d", &choice_case);
                     if(choice_case==0)
                     {
@@ -114,7 +114,6 @@ int place_desert(int *position, S_case piste[])
                 break;
         }
     }
-
     else
     {
         printf("Votre saisie est invalide, il y a un chameau sur cette case. \nVous allez devoir ressaisir une autre case.");

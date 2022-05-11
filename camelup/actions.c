@@ -14,7 +14,7 @@ int choix()
     printf("\n\t4. Parier sur la course");
     do
     {
-        printf("\nEntrez un nombre entre 1 et 4 pour choisir");
+        printf("\nEntrez un nombre entre 1 et 4 pour choisir ");
         scanf("%d", &choice);
     }while(choice<1 || choice>4);
     return choice;
@@ -29,7 +29,7 @@ int choix()
 int use_pyramid(S_case piste[], int pos[], int couleur, int valeur)
 {
     /*printf("\npas encore implemente");*/
-    printf("\nLe chameau numero %d avance de %d cases", couleur, valeur);
+    printf("\nLe chameau numero %d avance de %d cases\n", couleur, valeur);
     move_chamal(piste, pos, couleur, valeur);
     disp_piste(piste);
     return 1;
@@ -39,7 +39,7 @@ int pari_manche(int cartes_manche[][3],int num_joueur)
 {
     int CouleurChameau;
     do{
-    printf("\nSur quel chameau souhaitez vous parier? si vous souhaitez revenir au menu des choix d'action, tapez 0 ");
+    printf("\nSur quel chameau souhaitez vous parier? \nPour revenir au menu des choix d'action, entrez 0 ");
     scanf("%d",&CouleurChameau);
     }while(CouleurChameau<0||CouleurChameau>5);
     int i;
@@ -61,7 +61,7 @@ int pari_manche(int cartes_manche[][3],int num_joueur)
             }
 
     }
-    printf("\nvous ne pouvez pas parier sur ce chameau: il n'y a plus de cartes");  //si pas de slot libre, arrive jusqu'ici
+    printf("\nVous ne pouvez pas parier sur ce chameau : toutes les cartes ont été prises\n");  //si pas de slot libre, arrive jusqu'ici
     return 0;
 }
 
