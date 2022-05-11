@@ -44,7 +44,8 @@ int main()
         disp_paricourse(pari_win);
         printf("\nParis sur la defaite :");
         disp_paricourse(pari_loose);
-        printf("\nVous possedez %d livres.", joueurs[player].argent);
+        disp_parimanche(carte_manche);
+        printf("\n\nVous possedez %d livres.", joueurs[player].argent);   //affichage des données joueur
         printf("\nVous possedez %d tuiles pyramide.", joueurs[player].pyra);
 
         choice: switch(choix())     //choix des actions. Si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau

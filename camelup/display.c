@@ -3,7 +3,7 @@
 #include "defines.h"
 #include "display.h"
 
-int calcul_carte(int pos, int cartes);
+int calcul_carte(int carte);
 
 void disp_piste(S_case piste[])
 {
@@ -62,10 +62,15 @@ void disp_parimanche(int cartes[][3])
 {
     printf("\nVoici les cartes pari-manche sur le dessus des piles :\n");
     printf("  Chameau 1   Chameau 2   Chameau 3   Chameau 4   Chameau 5\n  ");
-    for(int a=0; a<5)
-    {
-        printf("Cartes %d    ", calcul_carte())
-    }
+    for(int a=0; a<5; a++)
+        for(int b=0; b<3; b++)
+            if(cartes[a][b]==0)
+            {
+                printf("Carte +%d    ", calcul_carte(b));
+                break;
+                if(b==2)
+                    printf("    Vide    ");
+            }
 }
 
 int calcul_carte(int carte)

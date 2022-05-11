@@ -114,13 +114,13 @@
 
 1652212055 /home/adrien/Documents/dev/camelup/alpha/camelup/defines.h
 
-1652286561 source:/home/adrien/Documents/dev/camelup/alpha/camelup/display.c
+1652294117 source:/home/adrien/Documents/dev/camelup/alpha/camelup/display.c
 	<stdio.h>
 	<stdlib.h>
 	"defines.h"
 	"display.h"
 
-1652286564 /home/adrien/Documents/dev/camelup/alpha/camelup/display.h
+1652293467 /home/adrien/Documents/dev/camelup/alpha/camelup/display.h
 
 1652212055 source:/home/adrien/Documents/dev/camelup/alpha/camelup/gainsmanche.c
 	<stdio.h>
@@ -154,7 +154,7 @@
 
 1652212055 /home/adrien/Documents/dev/camelup/alpha/camelup/tirage_pyramide.h
 
-1652285792 source:/home/adrien/Documents/dev/camelup/alpha/camelup/main.c
+1652293927 source:/home/adrien/Documents/dev/camelup/alpha/camelup/main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
