@@ -20,11 +20,11 @@ int choix()
     return choice;
 }
 
-int place_desert()
+/*int place_desert()
 {
     printf("\npas encore implemente");
     return 0;
-}
+}*/ //dans place_desert.h
 
 int use_pyramid(S_case piste[], int pos[], int couleur, int valeur)
 {

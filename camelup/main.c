@@ -8,6 +8,7 @@
 #include "tirage_pyramide.h"
 #include "actions.h"
 #include "gainsmanche.h"
+#include "place_desert.h"
 
 
 int main()
@@ -39,9 +40,9 @@ int main()
     {
         printf("\nC'est au joueur %d", player+1);
         disp_piste(piste);
-        choice: switch(choix())     //choix des actions
+        choice: switch(choix())     //choix des actions. Si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau
         {
-            case 1 : if(place_desert()==0)     //si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau
+            case 1 : if(place_desert(&joueurs[player].desert, piste)==0)    //pas d'annulation possible
                         goto choice;
                     break;
             case 2 : if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)

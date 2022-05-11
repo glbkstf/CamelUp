@@ -5,7 +5,7 @@
 int choix();
 
 //actions :
-int place_desert();
+/*int place_desert();*/ //dans place_desert.h
 
 int use_pyramid(S_case piste[], int pos[], int couleur, int valeur);
 
