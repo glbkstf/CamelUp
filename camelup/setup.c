@@ -15,9 +15,9 @@ void setup(S_case piste[], int cartes[][3], S_joueur joueurs[], int nb_plyr)
         }
     }
     for (int j=0; j<5; j++)
-        {
-            piste[16].cham[j]=0;
-        }
+    {
+        piste[16].cham[j]=0;
+    }
 
     for(int a=0; a<nb_plyr; a++)    // joueurs à zéro
     {

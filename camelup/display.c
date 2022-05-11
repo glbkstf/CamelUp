@@ -7,13 +7,21 @@ int calcul_carte(int carte);
 
 void disp_piste(S_case piste[])
 {
+    printf("\n|start");
+    for(int a=1; a<16; a++)
+        printf("| %2d  ", a);
+    printf("||finish\n");
+
+
     printf("\ndesert : \n|");
     for(int i=0; i<16; i++)
         switch(piste[i].desert)
         {
-            case 0 : printf("     |");
-                    break;
-            default : printf("  %d  |", piste[i].desert);
+        case 0 :
+            printf("     |");
+            break;
+        default :
+            printf("  %d  |", piste[i].desert);
         }
     printf("\nchameaux : \n");
     for (int j=4; j>=0; j--)
@@ -21,23 +29,27 @@ void disp_piste(S_case piste[])
         for (int i=0; i<16; i++)
             switch(piste[i].cham[j])
             {
-                case 0 : printf("|     ");
-                        break;
-                default : printf("|  %d  ", piste[i].cham[j]);
+            case 0 :
+                printf("|     ");
+                break;
+            default :
+                printf("|  %d  ", piste[i].cham[j]);
             }
         printf("|");
         switch(piste[16].cham[j])
-            {
-                case 0 : printf("|     ");
-                        break;
-                default : printf("|  %d  ", piste[16].cham[j]);
-            }
+        {
+        case 0 :
+            printf("|     ");
+            break;
+        default :
+            printf("|  %d  ", piste[16].cham[j]);
+        }
         printf("\n");
     }
-    printf("depart");
-    for(int a=1; a<16; a++)
-        printf("  %2d  ", a);
-    printf("  arrivee\n");
+    /*    printf("\n|start");
+        for(int a=1; a<16; a++)
+            printf("| %2d  ", a);
+        printf("||arrivee\n");*/
 }
 
 
@@ -46,7 +58,8 @@ void disp_paricourse(int pari[][2])
     if(pari[0][0]==0)
     {
         printf("\nAucun pari pour l'instant.\n");
-    }else
+    }
+    else
     {
         printf("\nJoueur : ");
         for(int a=0; pari[a][0]!=0; a++)
@@ -77,9 +90,12 @@ int calcul_carte(int carte)
 {
     switch(carte)
     {
-        case 0 : return 5;
-        case 1 : return 3;
-        case 2 : return 2;
+    case 0 :
+        return 5;
+    case 1 :
+        return 3;
+    case 2 :
+        return 2;
     }
 
 }

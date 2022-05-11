@@ -22,7 +22,7 @@ int main()
     int carte_manche[5][3];             // paris-manche
     int pari_win[nb_joueurs*5][2];      // paris sur la victoire
     int pari_loose[nb_joueurs*5][2];    // paris sur la défate
-    int pos_cham[5]={1,2,3,4,5};        // position des chamaux (R,Y,G,B,W)
+    int pos_cham[5]= {1,2,3,4,5};       // position des chamaux (R,Y,G,B,W)
 
     setup(piste, carte_manche, joueurs, nb_joueurs);
     setup_pari_course(pari_win, nb_joueurs);
@@ -48,46 +48,55 @@ int main()
         printf("\n\nVous possedez %d livres.", joueurs[player].argent);   //affichage des données joueur
         printf("\nVous possedez %d tuiles pyramide.", joueurs[player].pyra);
 
-        choice: switch(choix())     //choix des actions. Si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau
+choice:
+        switch(choix())     //choix des actions. Si action retourne 0, elle n'a pas été réalisé : il faut choisir à nouveau
         {
-            case 1 :    /*if(*/place_desert(&joueurs[player].desert, piste);/*==0)*/    //pas d'annulation implémentée
-                            /*goto choice;*/
-                        disp_piste(piste);
-                        break;
+        case 1 :    /*if(*/
+            place_desert(&joueurs[player].desert, piste);/*==0)*/    //pas d'annulation implémentée
+            /*goto choice;*/
+            disp_piste(piste);
+            break;
 
-            case 2 :    if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
-                            goto choice;
-                        joueurs[player].pyra++; //gain d'une tuile pyramide
-                        avcnt_pyr++;    //dé suivant
-                        disp_piste(piste);
-                        break;
+        case 2 :
+            if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
+                goto choice;
+            joueurs[player].pyra++; //gain d'une tuile pyramide
+            avcnt_pyr++;    //dé suivant
+            disp_piste(piste);
+            break;
 
-            case 3 :    if(pari_manche(carte_manche, player+1)==0)
-                            goto choice;
-                        break;
+        case 3 :
+            if(pari_manche(carte_manche, player+1)==0)
+                goto choice;
+            break;
 
-            case 4 :    victoireoudefaite:
-                        printf("\nParier sur la defaite ou la victoire ? (entrez respectivement -1 ou 1, ou 0 pour annuler)");
-                        int var;
-                        scanf("%d", &var);
-                        if(var==0);
-                            goto choice;
-                        switch(var)
-                        {
-                            case -1 :   if(pari_course()==0)  //pari sur la défaite
-                                            goto choice;
-                                        break;
-                            case 1 :    if(pari_course()==0)   //pari sur la victoire
-                                            goto choice;
-                                        break;
-                            default : goto victoireoudefaite;
-                        }
-                        break;
+        case 4 :
+victoireoudefaite:
+            printf("\nParier sur la defaite ou la victoire ? (entrez respectivement -1 ou 1, ou 0 pour annuler)");
+            int var;
+            scanf("%d", &var);
+            if(var==0);
+            goto choice;
+            switch(var)
+            {
+            case -1 :
+                if(pari_course()==0)  //pari sur la défaite
+                    goto choice;
+                break;
+            case 1 :
+                if(pari_course()==0)   //pari sur la victoire
+                    goto choice;
+                break;
+            default :
+                goto victoireoudefaite;
+            }
+            break;
         }
         player=(player+1) % (nb_joueurs);
         /*printf("\n\nAppuyez sur Entree pour continuer");*/
 
-    }while(avcnt_pyr<4);     //tant que toute la pyramide n'a pas été utilisée
+    }
+    while(avcnt_pyr<4);      //tant que toute la pyramide n'a pas été utilisée
 
     printf("\nFin de la manche.");
 

@@ -11,14 +11,17 @@ int move_chamal(S_case piste[], int pos[], int coulr, int pas)
     if(case_arr<16)    //évite qu'on sorte du plateau
         switch (piste[case_arr].desert) //application des deserts/oasis
         {
-            case 1 : case_arr=case_arr-1;
-                    break;
-            case 2 : case_arr=case_arr+1;
-                    break;
-        }else
-        {
-            case_arr=16;
+        case 1 :
+            case_arr=case_arr-1;
+            break;
+        case 2 :
+            case_arr=case_arr+1;
+            break;
         }
+    else
+    {
+        case_arr=16;
+    }
     if(case_arr>=16)
     {
         case_arr=16;

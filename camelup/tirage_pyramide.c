@@ -8,7 +8,7 @@ void shuffle(int liste[], int taille);
 
 void tirage_pyramide(S_pyr pyramide[])
 {
-    int pyra[5]={1,2,3,4,5};    //tableau des couleurs
+    int pyra[5]= {1,2,3,4,5};   //tableau des couleurs
 
     /*for(int a=0; a<5; a++)
         printf("%d", pyra[a]);*/
