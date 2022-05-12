@@ -70,6 +70,7 @@ void disp_paricourse(int pari[][2])
         for(int a=0; pari[a][1]!=0; a++)
             printf(" %d ", pari[a][1]);
     }
+    printf("\n");
 }
 
 

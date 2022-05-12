@@ -47,7 +47,7 @@ int main()
         tirage_pyramide(pyramide);
         do
         {
-            printf("\n\n\n\n\nC'est au joueur %d\n", player+1); //appel du joueur
+            printf("\v\v\v\v\v\v\v\v\v\v\v\vC'est au joueur %d\n", player+1); //appel du joueur
             disp_piste(piste);
             printf("\nParis sur la victoire :");      //affichage des paris-course
             disp_paricourse(pari_win);
@@ -71,7 +71,6 @@ int main()
                 if(use_pyramid(piste, pos_cham, pyramide[avcnt_pyr].couleur, pyramide[avcnt_pyr].valeur)==0)
                     goto findelapartie;
                 avcnt_pyr++;    //dé suivant
-                disp_piste(piste);
                 break;
 
             case 3 :
@@ -84,16 +83,16 @@ int main()
                 printf("\nParier sur la defaite ou la victoire ? (entrez respectivement -1 ou 1, ou 0 pour annuler)");
                 int var;
                 scanf("%d", &var);
-                if(var==0);
-                goto choice;
+                if(var==0)
+                    goto choice;
                 switch(var)
                 {
                 case -1 :
-                    if(pari_course(joueurs, pari_loose, player, nb_joueurs)==0)  //pari sur la défaite
+                    if(pari_course(joueurs, pari_loose, player+1, nb_joueurs)==0)  //pari sur la défaite
                         goto choice;
                     break;
                 case 1 :
-                    if(pari_course(joueurs, pari_win, player, nb_joueurs)==0)   //pari sur la victoire
+                    if(pari_course(joueurs, pari_win, player+1, nb_joueurs)==0)   //pari sur la victoire
                         goto choice;
                     break;
                 default :
@@ -106,10 +105,14 @@ int main()
             if(piste[16].cham[0]!=0)
                 goto findelapartie;
 
-        }
-        while(avcnt_pyr<4);      //tant que toute la pyramide n'a pas été utilisée
+            printf("\nAppuyez sur une touche pour continuer...");
+            getchar();
+            getchar();
 
-        printf("\nFin de la manche.");
+        }
+        while(avcnt_pyr<5);      //tant que toute la pyramide n'a pas été utilisée
+
+        printf("\n\nFin de la manche.");
 
         //calcule les gains de fin de manche
         gains_manche(piste, pos_cham, carte_manche, joueurs, nb_joueurs);
@@ -128,6 +131,9 @@ int main()
         for(int a=0; a<16; a++)             //remet à 0 les tuiles desert
             piste[a].desert=0;
 
+        printf("\nAppuyez sur une touche pour continuer...");
+        getchar();
+        getchar();
     }
     while(1);
 

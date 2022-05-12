@@ -30,7 +30,7 @@ int choix()
 int use_pyramid(S_case piste[], int pos[], int couleur, int valeur)
 {
     /*printf("\npas encore implemente");*/
-    printf("\nLe chameau numero %d avance de %d cases\n", couleur, valeur);
+    printf("\n\n\nLe chameau numero %d avance de %d cases\n", couleur, valeur);
     move_chamal(piste, pos, couleur, valeur);
     disp_piste(piste);
     return 1;
