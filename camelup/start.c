@@ -6,12 +6,12 @@
 int start()
 {
 
-    printf("\n\tBienvenue dans.......\v\v");
+    printf("\n\tBienvenue dans.......\n\n\n\n");
 
 
 
 
-    printf("                        __  \n");
+    printf("                __  \n");
     printf("                                 .--.      .'  `.  \n");
     printf("                               .' . :\\    /   :  L  \n");
     printf("                               F     :\\  /   . : |        .-._  \n");
@@ -50,8 +50,10 @@ int start()
     printf("                       L\\         \\ \\   J   | J   L  \n");
     printf("                      /__\\_________)_`._)_  |_/   \\_____  \n");
 
+    //art by Veronica Karlsson on asciiart.eu
 
-    printf("\v\v");
+
+    printf("\n\n\n\n");
 
 
     printf("________/\\\\\\\\\\\\\\\\\\____________________________________________________/\\\\\\\\\\\\_____/\\\\\\________/\\\\\\_______________  \n");
@@ -65,18 +67,18 @@ int start()
     printf("        _______\\/////////___\\////////\\//__\\///___\\///___\\///____\\//////////__\\/////////_____\\/////////_____\\///__________  \n");
 
 
-    printf("\v\v");
+    printf("\n\n\n\n");
 
     printf("\tAppuyez sur une touche pour continuer...");
     getchar();
 
-    printf("\v\v\v\v\v\v");
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n");
 
     printf("Dans cette version de CamelUp, vous n'interagissez qu'avec des nombres\n");
     printf("\nAppuyez sur une touche pour continuer...");
     getchar();
 
-    printf("\nLes chameaux sont chacuns représentés par un numero\nLes tuiles mirages par un 1 et les tuiles oasis par un 2");
+    printf("\nLes chameaux sont chacuns representes par un numero\nLes tuiles mirages par un 1 et les tuiles oasis par un 2");
     printf("\nAppuyez sur une touche pour continuer...");
     getchar();
 

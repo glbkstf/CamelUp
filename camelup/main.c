@@ -47,7 +47,7 @@ int main()
         tirage_pyramide(pyramide);
         do
         {
-            printf("\v\v\v\v\v\v\v\v\v\v\v\vC'est au joueur %d\n", player+1); //appel du joueur
+            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC'est au joueur %d\n", player+1); //appel du joueur
             disp_piste(piste);
             printf("\nParis sur la victoire :");      //affichage des paris-course
             disp_paricourse(pari_win);

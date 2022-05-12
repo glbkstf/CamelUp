@@ -28,6 +28,9 @@ int move_chamal(S_case piste[], int pos[], int coulr, int pas)
         finish=1;
     }
 
+    if(case_arr==case_dep)      //cas où les chameaux ne bougent pas à cause d'un desert
+        return 1;
+
 
     //printf("\nreperage depart");
 
