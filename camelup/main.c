@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "start.h"
 #include "defines.h"
 #include "display.h"
 #include "setup.h"
@@ -14,9 +15,11 @@
 
 int main()
 {
+
+
     //init de toutes les variables du jeu
     srand(time(NULL));
-    int nb_joueurs=4;
+    int nb_joueurs=start();
     S_case piste[17];                   // circuit
     S_pyr pyramide[5];
     S_joueur joueurs[4];                // données des joueurs
@@ -100,6 +103,8 @@ int main()
             }
             player=(player+1) % (nb_joueurs);
             /*printf("\n\nAppuyez sur Entree pour continuer");*/
+            if(piste[16].cham[0]!=0)
+                goto findelapartie;
 
         }
         while(avcnt_pyr<4);      //tant que toute la pyramide n'a pas été utilisée

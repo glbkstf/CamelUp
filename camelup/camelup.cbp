@@ -64,6 +64,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="setup.h" />
+		<Unit filename="start.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="start.h" />
 		<Unit filename="tirage_pyramide.c">
 			<Option compilerVar="CC" />
 		</Unit>

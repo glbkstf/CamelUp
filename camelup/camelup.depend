@@ -263,10 +263,11 @@
 
 1652298057 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/gainsmanche.h
 
-1652357816 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/main.c
+1652360892 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
+	"start.h"
 	"defines.h"
 	"display.h"
 	"setup.h"
@@ -317,4 +318,11 @@
 	"endgame.h"
 
 1652357820 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/endgame.h
+
+1652359263 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/start.h
+
+1652361026 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/start.c
+	<stdio.h>
+	<stdlib.h>
+	"start.h"
 
