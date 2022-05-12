@@ -115,7 +115,10 @@ int main()
         setup_pari_manche(carte_manche);    //remet à 0 les paris-manche
 
         for(int a=0; a<nb_joueurs; a++)     //remet à 0 les tuiles pyramide
+        {
             joueurs[a].pyra=0;
+            joueurs[a].desert=0;
+        }
 
         for(int a=0; a<16; a++)             //remet à 0 les tuiles desert
             piste[a].desert=0;
