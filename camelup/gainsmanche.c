@@ -3,7 +3,7 @@
 #include "defines.h"
 #include "gainsmanche.h"
 
-int calcul_gain(int pos, int cartes);
+int calcul(int pos, int cartes);
 
 void gains_manche(S_case piste[], int pos[], int cartes[][3], S_joueur joueurs[], int nb_jr)
 {
@@ -32,7 +32,7 @@ void gains_manche(S_case piste[], int pos[], int cartes[][3], S_joueur joueurs[]
                     {
                         if(cartes[piste[a].cham[b]-1][c]==0)    //qqun a pris cette carte ?
                             break;
-                        joueurs[cartes[piste[a].cham[b]-1][c]-1].argent = joueurs[cartes[piste[a].cham[b]-1][c]-1].argent + calcul_gain(place, c);
+                        joueurs[cartes[piste[a].cham[b]-1][c]-1].argent = joueurs[cartes[piste[a].cham[b]-1][c]-1].argent + calcul(place, c);
                         /*printf("\nJ%d + %d ", cartes[piste[a].cham[b]-1][c], calcul_gain(place, c));*/
                     }
                 place++;
@@ -41,7 +41,7 @@ void gains_manche(S_case piste[], int pos[], int cartes[][3], S_joueur joueurs[]
 }
 
 // calcule la qté de livres a donner
-int calcul_gain(int pos, int carte)
+int calcul(int pos, int carte)
 {
     switch(pos)
     {

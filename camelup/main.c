@@ -9,6 +9,7 @@
 #include "actions.h"
 #include "gainsmanche.h"
 #include "place_desert.h"
+#include "endgame.h"
 
 
 int main()
@@ -85,11 +86,11 @@ int main()
                 switch(var)
                 {
                 case -1 :
-                    if(pari_course()==0)  //pari sur la défaite
+                    if(pari_course(joueurs, pari_loose, player, nb_joueurs)==0)  //pari sur la défaite
                         goto choice;
                     break;
                 case 1 :
-                    if(pari_course()==0)   //pari sur la victoire
+                    if(pari_course(joueurs, pari_win, player, nb_joueurs)==0)   //pari sur la victoire
                         goto choice;
                     break;
                 default :
@@ -124,11 +125,17 @@ int main()
 
     findelapartie:
 
+    printf("\n\n\nFin de la partie !");
+    disp_piste(piste);
+
     gains_manche(piste, pos_cham, carte_manche, joueurs, nb_joueurs);
 
-    /*calcul endgame*/
+    result_course(joueurs, piste, pos_cham, pari_loose, -1);
+    result_course(joueurs, piste, pos_cham, pari_win, 1);
 
-    /*affichage scores*/
+    printf("\n\nLes scores finaux sont :");
+    for(int a=0; a<nb_joueurs; a++)
+            printf("\nJoueur %d a %d livres.", a+1, joueurs[a].argent);
 
     return 0;
 }

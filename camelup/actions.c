@@ -68,8 +68,35 @@ int pari_manche(int cartes_manche[][3],int num_joueur)
     return 0;
 }
 
-int pari_course()
+int pari_course(S_joueur joueurs[], int pari[][2],int num_joueur, int nb_jr)
 {
-    printf("\npas encore implemente");
+    int CouleurChameau;
+    do{
+    printf("\nSur quel chameau souhaitez vous parier? si vous souhaitez revenir au menu des choix d'action, tapez 0 ");
+    scanf("%d",&CouleurChameau);
+    }while(CouleurChameau<0||CouleurChameau>5);
+
+    if(CouleurChameau==0)
+        return 0;
+
+    if (joueurs[num_joueur-1].paricourse[CouleurChameau-1]==1)
+    {
+        printf("\nvous avez deja utilise cette carte de chameau");
+        return 0;
+    }
+    else{
+            joueurs[num_joueur-1].paricourse[CouleurChameau-1]=1;
+            int i;
+            for(i=0;i<nb_jr*5;i++)
+            {
+                if(pari[i][0]==0)
+                {
+                    pari[i][0]=num_joueur;
+                    pari[i][1]=CouleurChameau;
+                    return 1;
+                }
+            }
+        }
+
     return 0;
 }

@@ -235,7 +235,7 @@
 	"defines.h"
 	"place_desert.h"
 
-1652298057 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/actions.c
+1652357846 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/actions.c
 	<stdio.h>
 	<stdlib.h>
 	"deplacement.h"
@@ -255,7 +255,7 @@
 	<time.h>
 	"deplacement.h"
 
-1652298057 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/gainsmanche.c
+1652357899 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/gainsmanche.c
 	<stdio.h>
 	<stdlib.h>
 	"defines.h"
@@ -263,7 +263,7 @@
 
 1652298057 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/gainsmanche.h
 
-1652356127 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/main.c
+1652357816 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -275,12 +275,13 @@
 	"actions.h"
 	"gainsmanche.h"
 	"place_desert.h"
+	"endgame.h"
 
 1652355924 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/setup.h
 
 1652298057 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/tirage_pyramide.h
 
-1652298057 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/actions.h
+1652357821 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/actions.h
 
 1652298057 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/place_desert.h
 
@@ -308,4 +309,12 @@
 	<stdlib.h>
 	"defines.h"
 	"display.h"
+
+1652357819 source:/home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/endgame.c
+	<stdio.h>
+	<stdlib.h>
+	"defines.h"
+	"endgame.h"
+
+1652357820 /home/adrien/Documents/dev/CamelUp-0.4.4-alpha/camelup/endgame.h
 
